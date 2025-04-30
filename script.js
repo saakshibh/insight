@@ -72,3 +72,34 @@ function navigateTo(page) {
   const chartScript = document.createElement('script');
   chartScript.src = 'https://cdn.jsdelivr.net/npm/chart.js';
   document.head.appendChild(chartScript);
+  const loginForm = document.getElementById('loginForm');
+if (loginForm) {
+  loginForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    
+    const username = document.getElementById('username').value;
+    const password = document.getElementById('password').value;
+
+    try {
+      const res = await fetch('http://localhost:5000/login', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ username, password })
+      });
+
+      const data = await res.json();
+      const message = document.getElementById('loginMessage');
+
+      if (res.ok) {
+        message.innerText = data.message;
+        message.style.color = 'green';
+        // You can redirect to homepage here if needed
+      } else {
+        message.innerText = data.message;
+        message.style.color = 'red';
+      }
+    } catch (err) {
+      console.error('Error:', err);
+    }
+  });
+}
