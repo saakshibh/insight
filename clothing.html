@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Clothing Trends - NextWave Insights</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">NextWave Insights</div>
+    <nav class="nav-buttons">
+      <button onclick="navigateTo('index.html')">Home</button>
+      <button onclick="toggleGraph()">Graph</button>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Clothing Trends: Past & Future Forecast</h1>
+    <section class="trend-section">
+      <h2>Past Trends</h2>
+      <ul>
+        <li>Zara - Known for fast fashion between 2010 to 2020</li>
+        <li>H&M - Sustainable fashion push from 2020 onwards</li>
+        <li>Local boutiques - Spikes during festive seasons & weddings</li>
+      </ul>
+    </section>
+
+    <section class="trend-section">
+      <h2>Predicted Future Trends</h2>
+      <p>Based on fabric popularity, seasonality, and customer mentality:</p>
+      <ul>
+        <li>Organic cotton and bamboo fabrics will gain traction (2025-2035)</li>
+        <li>Personalized & AI-designed outfits will trend among Gen Z</li>
+        <li>Season-specific wardrobes will see more online demand (e.g., linen in summer)</li>
+      </ul>
+    </section>
+
+    <section id="graph-section" class="hidden">
+      <canvas id="clothingTrendGraph"></canvas>
+    </section>
+  </main>
+</body>
+</html>

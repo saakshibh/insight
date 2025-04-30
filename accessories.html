@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Accessories Trends - NextWave Insights</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">NextWave Insights</div>
+    <nav class="nav-buttons">
+      <button onclick="navigateTo('index.html')">Home</button>
+      <button onclick="toggleGraph()">Graph</button>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Accessories Trends: Past Data & Future Outlook</h1>
+    <section class="trend-section">
+      <h2>Past Trends</h2>
+      <ul>
+        <li>Chunky jewelry - Dominated from 2015 to 2021</li>
+        <li>Smartwatches - Increased adoption from 2018 to 2024</li>
+        <li>Sunglasses - Seasonal rise during spring/summer across years</li>
+      </ul>
+    </section>
+
+    <section class="trend-section">
+      <h2>Predicted Future Trends</h2>
+      <p>Analyzed via tech integration, seasonal cycles, and market behavior:</p>
+      <ul>
+        <li>Tech accessories like AR glasses will trend between 2026-2035</li>
+        <li>Custom, 3D-printed jewelry will rise in demand</li>
+        <li>Season-based accessory bundles will be favored in online stores</li>
+      </ul>
+    </section>
+
+    <section id="graph-section" class="hidden">
+      <canvas id="accessoryTrendGraph"></canvas>
+    </section>
+  </main>
+</body>
+</html>

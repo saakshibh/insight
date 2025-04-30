@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>NextWave Insights - Home</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">NextWave Insights</div>
+    <nav class="nav-buttons">
+      <button onclick="navigateTo('index.html')">Home</button>
+      <button onclick="navigateTo('shoes.html')">Shoes</button>
+      <button onclick="navigateTo('clothing.html')">Clothing</button>
+      <button onclick="navigateTo('accessories.html')">Accessories</button>
+      <button onclick="toggleGraph()">Graph</button>
+    </nav>
+    <input type="text" id="search" placeholder="Search trends..." onkeyup="searchTrends()" />
+  </header>
+
+  <main>
+    <h1>Predicting the Future of Fashion</h1>
+    <div class="category-container">
+      <div class="card" onclick="navigateTo('shoes.html')">
+        <img src="shoess.jpg" alt="Shoes" />
+        <h3>Shoes</h3>
+      </div>
+      <div class="card" onclick="navigateTo('clothing.html')">
+        <img src="clo.jpg" alt="Clothing" />
+        <h3>Clothing</h3>
+      </div>
+      <div class="card" onclick="navigateTo('accessories.html')">
+        <img src="acc.png" alt="Accessories" />
+        <h3>Accessories</h3>
+      </div>
+    </div>
+
+    <section id="graph-section" class="hidden">
+      <h2>Trends Overview (Past & Future)</h2>
+      <canvas id="trendGraph"></canvas>
+    </section>
+  </main>
+</body>
+</html>
